@@ -27,6 +27,32 @@ function showTime(){
 
 			showTime();
 
+		var doc = document.getElementById("background");
+		var color = ["#00CED1", "blue", "orangered", "mediumspringgreen"];
+		var i = 0;
+		function change() {
+  		doc.style.backgroundColor = color[i];
+  		i++;
+  
+  		if(i > color.length - 1) {
+    	i = 0;
+  		}
+	}
+		setInterval(change, 1000);
+
+
+
+
+// function change_random_bgcolor(change_time) {
+//       setInterval(function change_color() {
+//         $("body").animate({
+//         backgroundColor: getRandomColor()
+//     }, 500);
+// }, change_time);
+// }
+// change_random_bgcolor(1000);
+// });
+
 
 
 
