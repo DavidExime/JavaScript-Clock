@@ -1,15 +1,13 @@
 
-		body{
-			background: #0000FF;
+
+		body {
+			font-family: 'Lato';
+			margin-top: 200px;
+			text-align: center;
+			color: yellow;
 		}
-		.clock{
-			position: absolute;
-			top: 50%;
-			left: 50%;
-			transform: translateX(-50%) translateY(-50%);
-			color: #000000;
+
+		#clock {
+			font-weight: 300;
 			font-size: 100px;
-			border: 1px solid #ccc;
-			padding: 0px 5px 0px 5px;
-			font-family:'Orbitron', sans-serif;
 		}

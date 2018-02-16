@@ -1,4 +1,4 @@
-function showTime(){
+function hexClock(){
 				var date = new Date();
 				var h = date.getHours(); 
 				var m = date.getMinutes(); 
@@ -25,20 +25,44 @@ function showTime(){
 				setTimeout(showTime, 1000);
 			}
 
-			showTime();
+var clock = document.getElementById('clock');
+var hexColor = document.getElementById('hex-color');
 
-		var doc = document.getElementById("background");
-		var color = ["#00CED1", "blue", "orangered", "mediumspringgreen"];
-		var i = 0;
-		function change() {
-  		doc.style.backgroundColor = color[i];
-  		i++;
-  
-  		if(i > color.length - 1) {
-    	i = 0;
-  		}
+function hexClock() {
+	var time = new Date();
+	var hours = (time.getHours() % 12).toString();
+	var minutes = time.getMinutes().toString();
+	var seconds = time.getSeconds().toString();
+
+	if (hours.length < 2) {
+		hours = '0' + hours;
 	}
-		setInterval(change, 1000);
+
+	if (minutes.length < 2) {
+		minutes = '0' + minutes;
+	}
+
+	if (seconds.length < 2) {
+		seconds = '0' + seconds;
+	}
+
+	var clockStr = hours + ' : ' + minutes + ' : ' + seconds;
+	var hexColorStr = '#' + hours + minutes + seconds;
+
+	clock.textContent = clockStr;
+	hexColor.textContent = hexColorStr;
+	document.body.style.backgroundColor = hexColorStr;
+}
+
+hexClock();
+setInterval(hexClock, 1000);
+
+
+
+
+
+
+
 
 
 
